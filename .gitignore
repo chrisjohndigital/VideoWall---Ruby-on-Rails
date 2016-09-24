@@ -1,0 +1,15 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+/vendor/assets
+/test
+/config/secrets.yml
+/config/database.yml
+/config/initializers/secret_token.rb
+/public/uploads/
+Thumbs.db
+.DS_Store

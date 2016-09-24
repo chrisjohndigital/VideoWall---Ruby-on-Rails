@@ -1,0 +1,35 @@
+<div class="form-group">
+<%= f.hidden_field(:wall_id) %>
+    
+    <%=f.label(:name, "Title") %>
+    <%= f.text_field(:name, :class => 'form-control', :required => true) %><br>
+
+    <%=f.label(:position) %>
+    <%= f.select(:position, 1..@section_count, :selected => @section_count, :class => 'form-control', :required => true) %><br>
+
+    <%=f.label(:visible) %>
+    <%= f.check_box(:visible, :checked => true, :required => true) %><br>
+    
+    <%=f.label(:video_id, "Video ID") %>
+    <%= f.text_field(:video_id, :class => 'form-control', :required => true) %>
+
+    <%=f.label(:poster_id, "Poster ID") %>
+    <%= f.text_field(:poster_id, :class => 'form-control', :required => true) %>
+
+    <%=f.label(:mime_type, "Mime type") %>
+    <%= f.text_field(:mime_type, :class => 'form-control', :required => true) %>
+
+    <%=f.label(:video_width, "Video width") %>
+    <%= f.text_field(:video_width, :class => 'form-control', :required => true) %><br>
+
+    <%=f.label(:video_height, "Video height") %>
+    <%= f.text_field(:video_height, :class => 'form-control', :required => true) %><br>
+
+    <%=f.label(:attachment1, "Video attachment") %>
+    <%= f.file_field (:attachment1), :accept => 'video/*', :required => true %><br>
+
+    <%=f.label(:attachment2, "Poster attachment") %>
+    <%= f.file_field (:attachment2), :accept => 'image/*', :required => true %><br>
+
+    <%= submit_tag("Create Section", :class => 'btn btn-default') %>
+    </div>

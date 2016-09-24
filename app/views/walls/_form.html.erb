@@ -1,0 +1,9 @@
+<div class="form-group">
+    <%=f.label(:name, "Name") %>
+    <%= f.text_field(:name, :class => 'form-control', :required => true) %><br>
+    <%=f.label(:position) %>
+    <%= f.select(:position, 1..@wall_count, :selected => @wall_count, :class => 'form-control', :required => true) %><br>
+    <%=f.label(:visible) %>
+    <%= f.check_box(:visible, :checked => true, :required => true) %><br>
+    <%= submit_tag("Create Wall", :class => 'btn btn-default') %>
+</div>
