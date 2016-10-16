@@ -1,7 +1,7 @@
 VideoWall - Ruby on Rails
 ======================================
 
-Lightweight Ruby on Rails and MySQL application for creating HTML5-video based collaborative learning spaces
+Lightweight Ruby on Rails and MySQL application for creating asynchronous HTML5-video based collaborative learning spaces
 
 ##About
 
