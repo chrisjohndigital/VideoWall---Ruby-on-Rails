@@ -1,4 +1,4 @@
-$(document).on('page:change', function () {
+$(document).on('ready page:load', function () {
     var ext = ['.mp4', '.webm', '.jpg', '.png', '.gif'];
     var mime = ['video/mp4', 'video/webm'];
     $( "#section_attachment1" ).bind( "change", function(event) {
@@ -48,7 +48,8 @@ $(document).on('page:change', function () {
 			};
 			var device = navigator.mediaDevices.getUserMedia({audio: false, video: video_constraints});
             device.then(function(mediaStream) {
-                $('#camera').attr('src', window.URL.createObjectURL(mediaStream));
+                //$('#camera').attr('src', window.URL.createObjectURL(mediaStream)); //Deprecated
+                document.getElementById('camera').srcObject = mediaStream;
             });
             device.catch(function(err) {
                 alert (err);
